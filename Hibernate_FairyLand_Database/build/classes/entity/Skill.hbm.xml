@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-28 20:05:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Skill" table="SKILL">
+        <id name="_id" type="int">
+            <column name="_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="_name" type="java.lang.String">
+            <column name="_NAME" />
+        </property>
+        <property name="_icon" type="java.lang.String">
+            <column name="_ICON" />
+        </property>
+        <property name="_role">
+            <column name="_ROLE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">Enums.RoleType</param>
+            </type>
+        </property>
+        <property name="_skillType">
+            <column name="_SKILLTYPE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">Enums.SkillType</param>
+            </type>
+        </property>
+        <property name="_posType">
+            <column name="_POSTYPE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">Enums.SkillPosType</param>
+            </type>
+        </property>
+        <property name="_coldTime" type="float">
+            <column name="_COLDTIME" />
+        </property>
+        <property name="_continuedTime" type="float">
+            <column name="_CONTINUEDTIME" />
+        </property>
+        <property name="_damage" type="int">
+            <column name="_DAMAGE" />
+        </property>
+        <property name="_skillLevel" type="int">
+            <column name="_SKILLLEVEL" />
+        </property>
+    </class>
+</hibernate-mapping>

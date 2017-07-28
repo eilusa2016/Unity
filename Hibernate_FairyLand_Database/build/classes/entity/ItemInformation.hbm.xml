@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-28 20:05:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.ItemInformation" table="ITEMINFORMATION">
+        <id name="_id" type="int">
+            <column name="_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="_name" type="java.lang.String">
+            <column name="_NAME" />
+        </property>
+        <property name="_icon" type="java.lang.String">
+            <column name="_ICON" />
+        </property>
+        <property name="_itemtype">
+            <column name="_ITEMTYPE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">Enums.ItemType</param>
+            </type>
+        </property>
+        <property name="equType">
+            <column name="EQUTYPE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">Enums.EquipType</param>
+            </type>
+        </property>
+        <property name="_price" type="float">
+            <column name="_PRICE" />
+        </property>
+        <property name="_starLevel" type="int">
+            <column name="_STARLEVEL" />
+        </property>
+        <property name="_qualityLevel" type="int">
+            <column name="_QUALITYLEVEL" />
+        </property>
+        <property name="_damage" type="int">
+            <column name="_DAMAGE" />
+        </property>
+        <property name="_hp" type="int">
+            <column name="_HP" />
+        </property>
+        <property name="_fightPower" type="int">
+            <column name="_FIGHTPOWER" />
+        </property>
+        <property name="_infoType">
+            <column name="_INFOTYPE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">Enums.PlayerInfoType</param>
+            </type>
+        </property>
+        <property name="_applyValue" type="int">
+            <column name="_APPLYVALUE" />
+        </property>
+        <property name="_describe" type="java.lang.String">
+            <column name="_DESCRIBE" />
+        </property>
+    </class>
+</hibernate-mapping>

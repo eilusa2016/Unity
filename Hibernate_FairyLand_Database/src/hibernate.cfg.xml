@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+	    <!-- 配置JDBC 
+		<property name="connection.username">sa</property>
+		<property name="connection.password">zihong</property-->
+		
+		<!-- -
+			在Hibernate框架下使用microsoft提供的数据库驱动时存在如题bug——
+			（java.lang.AbstractMethodError: com.microsoft.jdbc.base.BaseDatabaseMetaData.supportsGetGeneratedKeys）。
+			我们需要换另外一种驱动jar包，即jtds
+		 <property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+        <property name="connection.url">jdbc:jtds:sqlserver://127.0.0.1:1433;DatabaseName=hibernate</property>
+		 -->
+		
+		<!--  property name="connection.url">jdbc:jtds:sqlserver://192.168.1.199:1433;DatabaseName=xhiber</property>
+		<property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property-->
+		<property name="connection.url">jdbc:sqlite:D:/sqlite/Fairy.db</property>
+		<property name="connection.driver_class">org.sqlite.JDBC</property>
+		<!-- 配置方言 -->
+		<property name="dialect">sqlite.SqLiteDialect</property>
+		<!-- 是否控制台显示sql -->
+		<property name="show_sql">true</property>
+		<!-- 是否对SQL进行格式化 -->
+		<property name="format_sql">true</property>
+		<!-- 数据库生成策略 -->
+		<property name="hbm2ddl.auto">create</property>
+    	
+    	
+    	<!-- mapping resource="entity/Students.hbm.xml" / -->
+    	<mapping resource="entity/Player.hbm.xml" />
+    	<mapping resource="entity/Item.hbm.xml" />
+    	<mapping resource="entity/ItemInformation.hbm.xml" />
+    	<mapping resource="entity/MissionTaskSystem.hbm.xml" />
+    	<mapping resource="entity/NPC.hbm.xml" />
+    	<mapping resource="entity/Skill.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

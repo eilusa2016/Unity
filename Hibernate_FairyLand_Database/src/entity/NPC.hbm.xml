@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-28 20:05:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.NPC" table="NPC">
+        <id name="npcId" type="int">
+            <column name="NPCID" />
+            <generator class="assigned" />
+        </id>
+        <property name="npcName" type="java.lang.String">
+            <column name="NPCNAME" />
+        </property>
+        <property name="des" type="java.lang.String">
+            <column name="DES" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-28 20:05:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Item" table="ITEM">
+        <id name="_id" type="int">
+            <column name="_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="_name" type="java.lang.String">
+            <column name="_NAME" />
+        </property>
+        <property name="_itemtype">
+            <column name="_ITEMTYPE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">Enums.ItemType</param>
+            </type>
+        </property>
+        <!--many-to-one name="_itemInfo" class="entity.ItemInformation" fetch="join">
+            <column name="_ITEMINFO" />
+        </many-to-one-->
+        <property name="_level" type="int">
+            <column name="_LEVEL" />
+        </property>
+        <property name="_count" type="int">
+            <column name="_COUNT" />
+        </property>
+        <property name="_dressed" type="java.lang.Boolean">
+            <column name="_DRESSED" />
+        </property>
+    </class>
+</hibernate-mapping>

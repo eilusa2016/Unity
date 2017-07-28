@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-28 20:05:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.MissionTaskSystem" table="MISSIONTASKSYSTEM">
+        <id name="_taskId" type="int">
+            <column name="_TASKID" />
+            <generator class="assigned" />
+        </id>
+        <property name="_taskType">
+            <column name="_TASKTYPE" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">Enums.TaskType</param>
+            </type>
+        </property>
+        <property name="_taskName" type="java.lang.String">
+            <column name="_TASKNAME" />
+        </property>
+        <property name="_taskIcon" type="java.lang.String">
+            <column name="_TASKICON" />
+        </property>
+        <property name="_taskDes" type="java.lang.String">
+            <column name="_TASKDES" />
+        </property>
+        <property name="_taskRewardCoin" type="int">
+            <column name="_TASKREWARDCOIN" />
+        </property>
+        <property name="_taskRewardDiamond" type="int">
+            <column name="_TASKREWARDDIAMOND" />
+        </property>
+        <property name="_taskTalkToNpc" type="java.lang.String">
+            <column name="_TASKTALKTONPC" />
+        </property>
+        <property name="_taskNpcId" type="int">
+            <column name="_TASKNPCID" />
+        </property>
+        <property name="_taskTranscriptId" type="int">
+            <column name="_TASKTRANSCRIPTID" />
+        </property>
+        <property name="_taskExcuteTime" type="float">
+            <column name="_TASKEXCUTETIME" />
+        </property>
+        <property name="_taskProgress">
+            <column name="_TASKPROGRESS" />
+            <type name="org.hibernate.type.EnumType">
+                <param name="type">12</param>
+                <param name="enumClass">Enums.TaskProgress</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>

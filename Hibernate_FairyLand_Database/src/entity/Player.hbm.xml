@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-28 20:05:54 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="entity.Player" table="PLAYER">
+        <id name="_playerID" type="int">
+            <column name="_PLAYERID" />
+            <generator class="assigned" />
+        </id>
+        <property name="_name" type="java.lang.String">
+            <column name="_NAME" />
+        </property>
+        <property name="_headPortrail" type="java.lang.String">
+            <column name="_HEADPORTRAIL" />
+        </property>
+        <property name="_level" type="int">
+            <column name="_LEVEL" />
+        </property>
+        <property name="_power" type="int">
+            <column name="_POWER" />
+        </property>
+        <property name="_exp" type="int">
+            <column name="_EXP" />
+        </property>
+        <property name="_expMax" type="int">
+            <column name="_EXPMAX" />
+        </property>
+        <property name="_diamond" type="int">
+            <column name="_DIAMOND" />
+        </property>
+        <property name="_coin" type="int">
+            <column name="_COIN" />
+        </property>
+        <property name="_energy" type="int">
+            <column name="_ENERGY" />
+        </property>
+        <property name="_energyMax" type="int">
+            <column name="_ENERGYMAX" />
+        </property>
+        <property name="_toughen" type="int">
+            <column name="_TOUGHEN" />
+        </property>
+        <property name="_toughenMax" type="int">
+            <column name="_TOUGHENMAX" />
+        </property>
+        <property name="_hp" type="int">
+            <column name="_HP" />
+        </property>
+        <property name="_hpMax" type="int">
+            <column name="_HPMAX" />
+        </property>
+        <property name="damage" type="int">
+            <column name="DAMAGE" />
+        </property>
+        <property name="_helmId" type="int">
+            <column name="_HELMID" />
+        </property>
+        <property name="_clothId" type="int">
+            <column name="_CLOTHID" />
+        </property>
+        <property name="_weaponId" type="int">
+            <column name="_WEAPONID" />
+        </property>
+        <property name="_shoesId" type="int">
+            <column name="_SHOESID" />
+        </property>
+        <property name="_necklaceId" type="int">
+            <column name="_NECKLACEID" />
+        </property>
+        <property name="_braceleId" type="int">
+            <column name="_BRACELEID" />
+        </property>
+        <property name="_ringId" type="int">
+            <column name="_RINGID" />
+        </property>
+        <property name="_wingId" type="int">
+            <column name="_WINGID" />
+        </property>
+    </class>
+</hibernate-mapping>
